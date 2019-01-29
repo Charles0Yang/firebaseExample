@@ -16,6 +16,8 @@
 		DA44DA7221F1DF2B00F91F40 /* firebaseExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44DA7121F1DF2B00F91F40 /* firebaseExampleTests.swift */; };
 		DA44DA7D21F1DF2B00F91F40 /* firebaseExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA44DA7C21F1DF2B00F91F40 /* firebaseExampleUITests.swift */; };
 		DA44DA8B21F1E00200F91F40 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA44DA8A21F1E00200F91F40 /* GoogleService-Info.plist */; };
+		DA7AB7E722007DD300DECEC3 /* etonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB7E622007DD300DECEC3 /* etonViewController.swift */; };
+		DA7AB7E922007DDE00DECEC3 /* playstationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7AB7E822007DDE00DECEC3 /* playstationViewController.swift */; };
 		DAD5B8E421F7453A00035002 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5B8E321F7453A00035002 /* mainViewController.swift */; };
 		DAD5B8E621F7454700035002 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD5B8E521F7454700035002 /* registerViewController.swift */; };
 		E388A90E577214487D747AE7 /* Pods_firebaseExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C28D2908D3D4EB808DAA238 /* Pods_firebaseExampleUITests.framework */; };
@@ -59,6 +61,8 @@
 		DA44DA7C21F1DF2B00F91F40 /* firebaseExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firebaseExampleUITests.swift; sourceTree = "<group>"; };
 		DA44DA7E21F1DF2B00F91F40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA44DA8A21F1E00200F91F40 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DA7AB7E622007DD300DECEC3 /* etonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etonViewController.swift; sourceTree = "<group>"; };
+		DA7AB7E822007DDE00DECEC3 /* playstationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playstationViewController.swift; sourceTree = "<group>"; };
 		DAD5B8E321F7453A00035002 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		DAD5B8E521F7454700035002 /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
 		E9A8597FDBF5A95E3C4E958C /* Pods-firebaseExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firebaseExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-firebaseExampleTests/Pods-firebaseExampleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 		DA44DA5021F1DF2900F91F40 = {
 			isa = PBXGroup;
 			children = (
+				DA7AB7E622007DD300DECEC3 /* etonViewController.swift */,
+				DA7AB7E822007DDE00DECEC3 /* playstationViewController.swift */,
 				DA44DA5B21F1DF2900F91F40 /* firebaseExample */,
 				DA44DA7021F1DF2B00F91F40 /* firebaseExampleTests */,
 				DA44DA7B21F1DF2B00F91F40 /* firebaseExampleUITests */,
@@ -186,6 +192,7 @@
 				DA44DA5621F1DF2900F91F40 /* Frameworks */,
 				DA44DA5721F1DF2900F91F40 /* Resources */,
 				54058F9AB8CE39FDD07D4EDE /* [CP] Embed Pods Frameworks */,
+				268D5C4BD22E0B6D4AF39B40 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -306,6 +313,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		268D5C4BD22E0B6D4AF39B40 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-firebaseExample/Pods-firebaseExample-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates-Firestore.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates-Firestore.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-firebaseExample/Pods-firebaseExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		31B0F013771E642FCA5F7B33 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -337,16 +366,26 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-firebaseExample/Pods-firebaseExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,7 +445,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA44DA5F21F1DF2900F91F40 /* ViewController.swift in Sources */,
+				DA7AB7E722007DD300DECEC3 /* etonViewController.swift in Sources */,
 				DA44DA5D21F1DF2900F91F40 /* AppDelegate.swift in Sources */,
+				DA7AB7E922007DDE00DECEC3 /* playstationViewController.swift in Sources */,
 				DAD5B8E421F7453A00035002 /* mainViewController.swift in Sources */,
 				DAD5B8E621F7454700035002 /* registerViewController.swift in Sources */,
 			);

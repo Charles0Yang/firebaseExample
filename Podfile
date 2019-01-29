@@ -8,6 +8,7 @@ target 'firebaseExample' do
   # Pods for firebaseExample
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
   target 'firebaseExampleTests' do
     inherit! :search_paths
